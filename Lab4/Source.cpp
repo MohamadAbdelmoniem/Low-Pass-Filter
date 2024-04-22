@@ -103,7 +103,7 @@ void applyLowPassFilterParallel(int* input, int* output, int width, int height, 
 int main() {
     int ImageWidth = 0, ImageHeight = 0;
 
-    string imagePath = "C:\\Users\\DELL\\Desktop\\HPC Labs\\Project\\Lab4\\lena.png";
+    string imagePath = "../lena.png";
     int* imageData = inputImage(&ImageWidth, &ImageHeight, imagePath);
 
     int* outputData = new int[ImageWidth * ImageHeight];
@@ -113,7 +113,7 @@ int main() {
     applyLowPassFilterParallel(imageData, outputData, ImageWidth, ImageHeight, kernelSize);
     clock_t stop_s = clock();
 
-    string outputPath = "C:\\Users\\DELL\\Desktop\\HPC Labs\\Project\\Lab4\\filterlena2.png";
+    string outputPath = "../filterlena2.png";
     createImage(outputData, ImageWidth, ImageHeight, outputPath);
 
     double TotalTime = (stop_s - start_s) / double(CLOCKS_PER_SEC) * 1000;
