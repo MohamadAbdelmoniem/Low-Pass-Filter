@@ -45,5 +45,3 @@ cd Low-Pass-Filter
 - Parallel processing components utilize [OpenMP](https://www.openmp.org/) and [MPI](https://www.mpich.org/).
 
 ---
-
-This updated README is now linked correctly to your GitHub repository, making it easy for collaborators and users to find and use your project.
